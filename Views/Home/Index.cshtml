@@ -1,0 +1,61 @@
+﻿@using LR3.Entities
+@model List<Product>
+
+@{
+    ViewData["Title"] = "Головна";
+}
+
+<h1>Список продуктів</h1>
+@Html.ActionLink("Створити продукт","CreateProduct", "Home", null, new { @class = "btn btn-success mt-3" })
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Назва</th>
+            <th scope="col">Опис</th>
+            <th scope="col">Ціна</th>
+            <th scope="col">Тип</th>
+            <th scope="col">Дії</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var product in Model)
+        {
+            <tr>
+                <th scope="row">@product.Id</th>
+                <td>@product.Title</td>
+                <td>@product.Description</td>
+                <td>@product.Price</td>
+                <td>
+                    @switch (product.ProductType)
+                    {
+                        case ProductType.Dress:
+                            <p>Сукня</p>
+                            break;
+                        case ProductType.Jeans:
+                            <p>Джинси</p>
+                            break;
+                        case ProductType.Tshirt:
+                            <p>Футболка</p>
+                            break;
+                        case ProductType.Coat:
+                            <p>Пальто</p>
+                            break;
+                        case ProductType.Jacket:
+                            <p>Куртка</p>
+                            break;
+                        case ProductType.DownJacket:
+                            <p>Пуховик</p>
+                            break;
+                    }
+                </td>
+                <td>
+                    @Html.ActionLink("Переглянути", "GetProduct", "Home", new { id = product.Id }, new { @class = "btn btn-primary" })
+                    @Html.ActionLink("Змінити", "GetModifyProduct", "Home", new { id = product.Id }, new { @class = "btn btn-success" })
+                    @Html.ActionLink("Видалити", "DeleteProduct", "Home", new { id = product.Id }, new { @class = "btn btn-danger" })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

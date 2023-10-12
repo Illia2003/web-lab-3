@@ -1,0 +1,41 @@
+﻿@using LR3.Entities
+@model Product
+
+@{
+    ViewData["Title"] = "Продукт " + Model.Title;
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Назва продукту</p>
+@Html.LabelFor(t => t.Title)
+
+<p>Опис продукту</p>
+@Html.LabelFor(t => t.Description)
+
+<p>Ціна продукту</p>
+@Html.LabelFor(t => t.Price)
+
+<p>Тип продукту</p>
+@switch (Model.ProductType)
+{
+    case ProductType.Dress:
+        <p>Сукня</p>
+        break;
+    case ProductType.Jeans:
+        <p>Джинси</p>
+        break;
+    case ProductType.Tshirt:
+        <p>Футболка</p>
+        break;
+    case ProductType.Coat:
+        <p>Пальто</p>
+        break;
+    case ProductType.Jacket:
+        <p>Куртка</p>
+        break;
+    case ProductType.DownJacket:
+        <p>Пуховик</p>
+        break;
+}
+
+@Html.ActionLink("Назад", "Index", "Home", null, new { @class = "btn btn-primary" })

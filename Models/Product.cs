@@ -1,6 +1,6 @@
-﻿namespace LR3.Entities;
+﻿namespace LR3.Models;
 
-public class Product : BaseEntity
+public class Product : BaseModel
 {
     public string Title { get; set; }
 

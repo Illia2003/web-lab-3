@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9aypDIhgriNijaXSS9dSiaaVCXzaYGziQkclCSD9cV0NZb4aC5F/xCGeH9/BKiC7l80qHkcFJ2shCtewZk2FCA==",
+  "dgSpecHash": "0mDCWsHIJK7w4d3jLo63B9dQ5UpzPPtR6OSn5i752qvQEF/FO70Ps/6990P2skfnPsf0j2cnBtVhUE1u6OghEQ==",
   "success": true,
-  "projectFilePath": "D:\\ХНУ\\3\\Інтернет\\Лабораторна робота 2\\LR3\\LR3\\LR3\\LR3.csproj",
+  "projectFilePath": "D:\\ХНУ\\3\\Інтернет\\Лабораторна робота 3\\LR3\\LR3\\LR3\\LR3.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

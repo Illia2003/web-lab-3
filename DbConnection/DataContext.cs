@@ -1,4 +1,4 @@
-﻿using LR3.Entities;
+﻿using LR3.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace LR3.DbConnection;

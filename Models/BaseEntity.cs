@@ -1,12 +1,12 @@
-﻿namespace LR3.Entities;
+﻿namespace LR3.Models;
 
-public class BaseEntity
+public class BaseModel
 {
     public Guid Id { get; set; }
 
     public DateTime CreatedAt { get; set; }
 
-    public BaseEntity()
+    public BaseModel()
     {
         Id = Guid.NewGuid();
         CreatedAt = DateTime.Now;

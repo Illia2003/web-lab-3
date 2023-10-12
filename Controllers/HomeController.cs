@@ -1,5 +1,4 @@
 ﻿using LR3.DbConnection;
-using LR3.Entities;
 using LR3.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
